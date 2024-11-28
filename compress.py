@@ -25,6 +25,9 @@ class HuffmanNode:
         self.left = None
         self.right = None
 
+    def __lt__(self, other):
+        return self.freq < other.freq
+
 def build_leaves(freqs):
     res = []
     for s in freqs:
